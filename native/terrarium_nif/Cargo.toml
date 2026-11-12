@@ -1,0 +1,20 @@
+[package]
+name = "terrarium_nif"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "terrarium_nif"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+rustler = "0.37"
+# Pure-Rust decoders; both crates declare #![forbid(unsafe_code)].
+image-webp = "0.2"
+png = "0.17"
+
+[features]
+default = []
+nif_version_2_15 = ["rustler/nif_version_2_15"]
+nif_version_2_16 = ["rustler/nif_version_2_16"]
+nif_version_2_17 = ["rustler/nif_version_2_17"]
