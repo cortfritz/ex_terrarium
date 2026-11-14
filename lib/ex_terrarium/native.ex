@@ -7,7 +7,7 @@ defmodule ExTerrarium.Native do
     crate: "terrarium_nif",
     base_url: "https://github.com/cortfritz/ex_terrarium/releases/download/v#{version}",
     force_build:
-      System.get_env("RUSTLER_PRECOMPILATION_EXAMPLE_BUILD") in ["1", "true"] or
+      System.get_env("EX_TERRARIUM_BUILD") in ["1", "true"] or
         Mix.env() in [:dev, :test],
     version: version
 

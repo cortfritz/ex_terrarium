@@ -60,13 +60,14 @@ water: Mapterhorn reports 0 m over the sea, while AWS Terrain Tiles include bath
 ```elixir
 def deps do
   [
-    {:ex_terrarium, "~> 0.1"}
+    {:ex_terrarium, github: "cortfritz/ex_terrarium", tag: "v0.1.0"}
   ]
 end
 ```
 
-Precompiled NIFs are downloaded for common targets. To build from source, install Rust
-(1.91 or newer) and set `RUSTLER_PRECOMPILATION_EXAMPLE_BUILD=1`.
+Precompiled NIFs (macOS, Linux and Windows; NIF 2.15-2.17) are downloaded from the
+GitHub release and checked against `checksum-Elixir.ExTerrarium.Native.exs`. To build from source, install Rust
+(1.91 or newer) and set `EX_TERRARIUM_BUILD=1`.
 
 ## Development
 
